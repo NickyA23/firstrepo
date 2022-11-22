@@ -1,18 +1,32 @@
-//class Pet {
-//    constructor(name, age, type, breed, colour, time) {
-//    this.name = name;
-//    this.age = age;
-//    this.type = type;
-//    this.breed = breed;
-//    this.colour = colour;
-//    this.lastFed = time;
-//    }
-//    feedPet (time) {
-//    this.lastFed = time;
-//    return `Last feed updated to: ${this.lastFed} for ${this.name}`;
-//    }
-//    }
-//    const Bella = new Pet("Bella", 2, "Dog", "GS", "B&T", "08:00");
+class Pet {
+    constructor(name, age, type, breed, colour, time) {
+    this.name = name;
+    this.age = age;
+    this.type = type;
+    this.breed = breed;
+    this.colour = colour;
+    this.lastFed = time;
+    }
+    get petInfo () {
+        return `${this.firstname} is a ${this.type}, ${this.age} year(s) old`;
+    }
+    set fullName (name) {
+        const array = name.split(' ');
+        this.firstname = array[0];
+        this.surname = array[1];
+    }
+    feedPet (time) {
+    this.lastFed = time;
+    return `Last feed updated to: ${this.lastFed} for ${this.name}`;
+    }
+    }
+
+   const Bella = new Pet("Bella", 2, "Dog", "GS", "B&T", "08:00");
+   Bella.fullName = "Bella Crompton";
+
+   console.log(Bella);
+   
+
 //    console.log(Bella);
 //    console.log(Bella.feedPet("15:00"));
 //    console.log(Bella);
@@ -78,15 +92,14 @@
 
     //    console.log(Betty)
 
-        class Rental {
-            constructor(name, address, number, movies) {
-                this.name = name;
-                this.address = address;
-                this.number = number;
-                this. movies = movies;
-            }
-        }
-        const test = new Rental("Blockbuster", "20 King Street","01565 755333","Scarface, Limitless, The Matrix");
+    //    class Rental {
+    //        constructor(name, address, number, movies) {
+    //            this.name = name;
+    //            this.address = address;
+    //            this.number = number;
+    //            this. movies = movies;
+    //        }
+    //    }
+    //    const test = new Rental("Blockbuster", "20 King Street","01565 755333","Scarface, Limitless, The Matrix");
 
-        console.log(test)
-        
+    //    console.log(test)
